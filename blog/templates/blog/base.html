@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load staticfiles  %}
+{% load static  %}
 <html>
     <head>
         <title>Blog</title>
@@ -18,8 +18,8 @@
         <nav class="navbar navbar-default techfont custom-navbar">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><a class='navbar-brand bigbrand' href="{% url post_list%}">My blog</a></li>
-                    <li><a href="{% url 'about' %}"></a>About</li>
+                    <li><a class='navbar-brand bigbrand' href="{% url 'post_list' %}">My blog</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="https://www.github.com">Github</a></li>
                     <li><a href="https://www.lonkedin.com">LinkedIn</a></li>
                 </ul>

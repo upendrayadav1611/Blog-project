@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (TemplateView,ListView,
-                                    DetailView,CreateView
+                                    DetailView,CreateView,
                                     UpdateView,DeleteView)
 
 # Create your views here.
@@ -66,7 +66,7 @@ def add_comment_to_post(request,pk):
             comment.save()
             return  redirect('post_detail',pk=post.pk)
 
-    else
+    else:
         form = CommentForm()
     return render(request,'blog/comment_form.html',{'form':form})
 

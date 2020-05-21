@@ -1,5 +1,5 @@
 {% extends 'blog/base.html' %}
-{% block content%}
+{% block content %}
 <div class="centerstage">
     {% for post in post_list %}
     <div class="post">
@@ -7,7 +7,7 @@
         <div>
             <p>Published on: {{post.published|date:"D M Y"}}</p>
         </div>
-        <a href="{% urls 'post_detail' pk=post.pk %}">Comments: {{post.approve_comments.count}}</a>
+        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{post.approve_comments.count}}</a>
     </div>
     {% endfor %}
 </div>
